@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 
 dotenv.config();
 
+// Routes
 const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const taskRoutes = require('./routes/taskRoutes');
@@ -13,10 +14,10 @@ const viewRoutes = require('./routes/viewRoutes');
 
 const app = express();
 
-// ✅ IMPORTANT: Railway uses dynamic PORT
+// ✅ Railway PORT
 const PORT = process.env.PORT || 8080;
 
-// ✅ Required for production (cookies / proxies)
+// ✅ Required for cookies in production
 app.set('trust proxy', 1);
 
 // View engine
@@ -52,7 +53,7 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).render('error', { message: err.message || 'Server error' });
 });
 
-// Start server
+// 🚀 Start server
 async function startServer() {
   try {
     const mongoUri = process.env.MONGO_URI;
@@ -65,7 +66,6 @@ async function startServer() {
 
     console.log('✅ Connected to MongoDB');
 
-    // ✅ IMPORTANT: bind to 0.0.0.0 for cloud
     app.listen(PORT, '0.0.0.0', () => {
       console.log(`🚀 Server running on port ${PORT}`);
     });
