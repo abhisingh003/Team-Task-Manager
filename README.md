@@ -1,39 +1,141 @@
-# Team Task Manager
+# 🚀 Team Task Manager
 
-A production-ready task management web application built with Node.js, Express, MongoDB, Mongoose, JWT authentication, and EJS server-side rendering.
+A production-ready task management web application built with **Node.js, Express, MongoDB, Mongoose, JWT authentication, and EJS server-side rendering**.
 
-## Features
+---
 
-- User signup and login
-- Role-based access control: admin and member
-- Admin-only project creation and member management
-- Task assignment and member status updates
-- Dashboard with overdue highlights and task summaries
+## 🌍 Live Demo
 
-## Folder Structure
+🔗 https://team-task-manager-production-c47b.up.railway.app
+👉 Login: https://team-task-manager-production-c47b.up.railway.app/login
 
-- `models/`
-- `controllers/`
-- `routes/`
-- `middleware/`
-- `views/`
-- `public/css/`
-- `app.js`
+---
 
-## Setup
+## 📌 Features
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Create `.env` from `.env.example`.
-3. Start the server:
-   ```bash
-   npm start
-   ```
+* 🔐 User Signup & Login (JWT + Cookies)
+* 👥 Role-Based Access Control (Admin / Member)
+* 📁 Admin-only Project Creation & Team Management
+* ✅ Task Assignment & Status Updates
+* 📊 Dashboard with Task Summary
+* ⏰ Overdue Task Highlighting
+* ☁️ Fully deployed on cloud
 
-## Deployment on Railway
+---
 
-1. Create a new Railway project and connect your GitHub repo or deploy from the folder.
-2. Set environment variables: `PORT`, `MONGO_URI`, `JWT_SECRET`, `COOKIE_NAME`, `NODE_ENV`.
-3. Use the start command: `npm start`.
+## 🛠 Tech Stack
+
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB (MongoDB Atlas)
+* **Frontend:** EJS, HTML, CSS
+* **Authentication:** JWT + Cookies
+* **Deployment:** Railway
+
+---
+
+## 📁 Folder Structure
+
+```
+models/
+controllers/
+routes/
+middleware/
+views/
+public/css/
+app.js
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file:
+
+```env id="env01"
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+COOKIE_NAME=token
+NODE_ENV=development
+PORT=3000
+```
+
+For production (Railway), configure:
+
+* `MONGO_URI`
+* `JWT_SECRET`
+* `COOKIE_NAME`
+* `NODE_ENV=production`
+
+---
+
+## 🧪 Setup & Run Locally
+
+### 1. Install dependencies
+
+```bash id="cmd01"
+npm install
+```
+
+### 2. Start the server
+
+```bash id="cmd02"
+npm start
+```
+
+### 3. Open browser
+
+```
+http://localhost:3000/login
+```
+
+---
+
+## 🚂 Deployment (Railway)
+
+This application is deployed using Railway with:
+
+* Dynamic port handling:
+
+```js id="code01"
+const PORT = process.env.PORT || 8080;
+```
+
+* Server binding:
+
+```js id="code02"
+app.listen(PORT, '0.0.0.0');
+```
+
+* Cloud database via MongoDB Atlas
+
+---
+
+## 🚀 Future Improvements
+
+* 📱 Mobile responsive UI
+* 🔔 Notifications system
+* 📊 Advanced analytics dashboard
+* 🌐 Custom domain
+* 🧑‍🤝‍🧑 Real-time collaboration
+
+---
+
+## 👨‍💻 Author
+
+**Abhishek Singh**
+
+* GitHub: https://github.com/abhisingh003
+
+---
+
+<div align="right">
+
+### ✨ Made by Abhishek Singh
+
+</div>
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
