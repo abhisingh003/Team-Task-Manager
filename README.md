@@ -52,7 +52,7 @@ app.js
 Create a `.env` file:
 
 ```env id="env01"
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb+srv://abhijklmnosingh_db_user:<db_password>@cluster0.cqhxvuq.mongodb.net/?appName=Cluster0
 JWT_SECRET=your_secret_key
 COOKIE_NAME=token
 NODE_ENV=development
